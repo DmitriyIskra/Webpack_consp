@@ -13,9 +13,11 @@ module.exports = {
     module: {
         rules: [ // Здесь распознавание и имена загрузщиков
             {
-                test: /\.js/,
+                test: /\.js$/, 
                 exclude: /node_modules/, // Дирректива указывающая какие файлы или какие папки не нужно трогать для преобразования в нашем случае node-modules, работает через регулярное выражение
-                loader: 'babel-loader'
+                use: {
+                    loader: 'babel-loader'
+                },
             },
             {
                 test: /\.txt$/,  // проверка что за файл
@@ -28,17 +30,17 @@ module.exports = {
                     'css-loader' // загрузщики нужно указывать в обратном порядке, сначала обработается этим загрузщиком
                 ]
             },   
-        ]
+        ] 
     },
     plugins: [ // Здесь плагины к загрузщикам
         new HtmlWebpackPlugin({
             template: './src/index.html', // файл шаблона (какой файл будетпеределывать), и нужно создать этот файл в папке и создать в нем структуру документа
-            filename: 'main.html' // так можно создать другой файл для конечной сборки
+            filename: 'index.html' // так можно создать другой файл для конечной сборки
         }),
         new MiniCSSExtractPlugin()
     ],
     devServer: {
-        watchFiles: './src',
+        watchFiles: './src', 
         port: 9000,
     },   
 }

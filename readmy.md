@@ -20,7 +20,7 @@ webpack для сжатия проекта для быстродействия
 2. 
 
 
-Инициализировали пакет
+Инициализировали пакет 
 
 Установили webpack 
 npm install --save-dev webpack webpack-cli
@@ -31,7 +31,7 @@ npm install --save-dev webpack webpack-cli
 В качетсве результата этот фай должен экспортировать объект, так как работаем с node.js пользоваться будем commonjs
 module.export = {
     
-}
+} 
 
 Далее создаем точку входа, по умолчанию точкой входа должен являться файл index.js и находиться в папке src
 Создаем папку src
@@ -40,7 +40,7 @@ module.export = {
 Этот файл будет являться результатом сборки
 Поменять 
 module.export {
-    output: {
+    output: { 
         path: './dist',  // будет ошибка, путь должен быть в абсолютном формате
         filename:'app.bundle.js',
     },
@@ -75,9 +75,11 @@ module.export = {
 
 (загрузщики создаются энтузиастами и только часть загрузщиков создана самим коллективом разработчиков webpack, загрузшики испоьзуются для работы с модулями для импорта и обработки, если этих возможностей не достаточно, существуют ПЛАГИНЫ)
 
-Для сборки html файлов используется HtmlWebpackPlugin устанавливается через npm
-Устанавливаем npm i --save-dev html-webpack-plugin.
+
 ### HTML --- HtmlWebpackPlugin
+Для сборки html файлов используется HtmlWebpackPlugin устанавливается через npm
+Устанавливаем npm i --save-dev html-webpack-plugin
+
 
 ### CSS MiniCSSExtraPlugin
     npm i --save-dev mini-css-extract-plugin css-loader
@@ -103,6 +105,8 @@ npm i --save-dev webpack-dev-server
 
 Пропишем в скриптах, команду для быстрого запуска
 "start": "webpack serve --mode development"
+
+ВАЖНО!!! Главный и запускаемый файл не может носить имя отличное от index.html
 
 
 ### Библиотека moment
