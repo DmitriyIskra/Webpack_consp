@@ -1,5 +1,11 @@
 webpack для сжатия проекта для быстродействия
 
+1. npm install --save-dev webpack webpack-cli
+2. npm i --save-dev html-webpack-plugin
+3. npm i --save-dev mini-css-extract-plugin css-loader
+4. npm i --save-dev webpack-dev-server
+
+
 ## ТЕРМИНЫ
 1. сборка - это финальные файлы
 2. граф зависимости - все файлы которые используются в проекте
@@ -112,7 +118,7 @@ npm i --save-dev webpack-dev-server
 ### Библиотека moment
 npm run moment для работы со временем
 в точке входа в консоли выведем текущее время
-Делаем сборку и увидим в консоли количество милисекунд
+Делаем сборку и увидим в консоли количество милисекунд 
 
 
 ## Babel in webpack
